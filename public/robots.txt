@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mom-s-secret-spices.vercel.app/sitemap.xml

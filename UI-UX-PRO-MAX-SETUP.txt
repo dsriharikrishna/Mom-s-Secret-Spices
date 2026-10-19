@@ -1,0 +1,64 @@
+================================================================================
+UI/UX PRO MAX - ALL-IN-ONE SETUP GUIDE FOR ANY NEW PROJECT
+Repository: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+================================================================================
+
+HOW TO USE:
+Whenever you create a new project folder, open PowerShell inside that folder 
+and run the command below (or run Option B).
+
+--------------------------------------------------------------------------------
+OPTION A: ONE SINGLE COMMAND TO COPY & PASTE (RECOMMENDED)
+--------------------------------------------------------------------------------
+Copy and run this exact command in PowerShell inside your new project folder:
+
+npx ui-ux-pro-max-cli init --ai antigravity -f; @"
+# Website & UI/UX Design System Rules
+
+For every website, web application, component, and user experience built in this project:
+
+1. **UI/UX Pro Max Reference Integration**:
+   - Reference and follow the design guidelines, style catalogs, color systems, and font pairings in [.agents/skills/ui-ux-pro-max/SKILL.md](file:///.agents/skills/ui-ux-pro-max/SKILL.md).
+   - Leverage the companion skills installed in `.agents/skills/`:
+     - `ui-ux-pro-max` (comprehensive UI intelligence, 79 UI styles, 192 palettes, 74 font pairings, 119 UX guidelines)
+     - `design-system` (tokens, component systems, atomic consistency)
+     - `ui-styling` (CSS architecture, modern animation, responsive layout)
+     - `brand` (identity, tone, and brand cohesion)
+     - `banner-design` (hero sections, banners, visual graphics)
+
+2. **Design Intelligence Query Workflow**:
+   - When initiating a new website page or theme, run the UI/UX Pro Max query script to fetch tailored recommendations:
+     `python .agents/skills/ui-ux-pro-max/scripts/search.py "<product-type-or-topic>"`
+   - Use the returned primary/secondary styles, color palettes, and UX patterns to construct design tokens and interface structures.
+
+3. **Visual Quality Standards**:
+   - Deliver production-grade visual polish with intentional contrast, clean typography scales, and fluid responsive interactions.
+"@ | Out-File -FilePath "AGENTS.md" -Encoding utf8
+
+
+--------------------------------------------------------------------------------
+OPTION B: STEP-BY-STEP COMMANDS
+--------------------------------------------------------------------------------
+Step 1: Install skills in the new project
+npx ui-ux-pro-max-cli init --ai antigravity -f
+
+Step 2: Create AGENTS.md rule file
+Create a file named AGENTS.md in the project root with the content from Section 2 above.
+
+
+--------------------------------------------------------------------------------
+OPTION C: RUN SCRIPT FILE
+--------------------------------------------------------------------------------
+powershell -ExecutionPolicy Bypass -File "c:\Users\Signi\Documents\WebApplications\3d-website-practice\setup-uipro.ps1"
+
+
+--------------------------------------------------------------------------------
+HOW TO TEST & GET DESIGN RECOMMENDATIONS:
+--------------------------------------------------------------------------------
+Run any of these search commands to get color palettes, styles, and UI advice:
+
+python .agents/skills/ui-ux-pro-max/scripts/search.py "saas landing page"
+python .agents/skills/ui-ux-pro-max/scripts/search.py "3d portfolio"
+python .agents/skills/ui-ux-pro-max/scripts/search.py "ecommerce store"
+python .agents/skills/ui-ux-pro-max/scripts/search.py "fintech dashboard"
+================================================================================
