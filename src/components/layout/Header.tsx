@@ -122,7 +122,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Refined Luxury Navigation Drawer (Single Viewport Fit - No Scrolling) */}
+      {/* Refined Luxury Navigation Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -130,10 +130,10 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="fixed inset-0 z-[60] bg-[#1F1410] text-[#FDF8F0] flex flex-col justify-between p-6 sm:p-10 md:p-12 h-screen overflow-hidden select-none"
+            className="fixed inset-0 z-[60] bg-[#1F1410] text-[#FDF8F0] flex flex-col justify-between p-5 sm:p-10 md:p-12 min-h-screen overflow-y-auto select-none"
           >
             {/* Top Bar inside Menu: Logo & Status */}
-            <div className="max-w-7xl mx-auto w-full flex items-center justify-between border-b border-[#FDF8F0]/15 pb-4 pt-4">
+            <div className="max-w-7xl mx-auto w-full flex items-center justify-between border-b border-[#FDF8F0]/15 pb-4 pt-2 shrink-0">
               <Link href="/" onClick={() => setIsOpen(false)} className="relative w-28 h-10 sm:w-36 sm:h-11">
                 <Image
                   src="/brand-logo-transparent.webp"
@@ -157,8 +157,8 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Main Editorial Nav Links Layout (Fits Viewport Without Scroll) */}
-            <div className="max-w-7xl mx-auto w-full my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-2">
+            {/* Main Editorial Nav Links Layout */}
+            <div className="max-w-7xl mx-auto w-full my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-6 sm:py-2">
               {/* Left Column: Staggered Display Links */}
               <div className="lg:col-span-8 flex flex-col">
                 {navLinks.map((link, index) => {
