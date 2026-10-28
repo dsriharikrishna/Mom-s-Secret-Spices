@@ -3,27 +3,44 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, Check, MessageCircle, ShieldCheck, Sparkles, MapPin } from 'lucide-react';
+import { ArrowLeft, Check, MessageCircle, ShieldCheck, Sparkles, MapPin, ShoppingBag } from 'lucide-react';
 import { PRODUCTS, Product } from '@/data/products';
 import { buildWhatsAppOrderUrl } from '@/lib/whatsapp';
+import { useCartStore } from '@/store/cartStore';
+import { formatPrice } from '@/lib/formatPrice';
 
 export default function ProductDetailClient({ product }: { product: Product }) {
   const [selectedPackIndex, setSelectedPackIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [customerNote, setCustomerNote] = useState('');
+  const { addItem, openCart } = useCartStore();
 
   const currentPack = product.packs[selectedPackIndex] || product.packs[0];
   const unitPrice = currentPack?.price || 0;
   const totalPrice = unitPrice * quantity;
 
-  // WhatsApp Order Link
+  // WhatsApp Single-Product Direct Order Link
   const orderUrl = buildWhatsAppOrderUrl({
     productName: product.name,
     packSize: currentPack?.size || '100g',
     quantity,
     unitPrice,
     customerNote,
+    image: product.image,
   });
+
+  const handleAddToCart = () => {
+    addItem({
+      productId: product.id,
+      slug: product.slug,
+      name: product.name,
+      packSize: currentPack?.size || '100g',
+      unitPrice,
+      quantity,
+      image: product.image,
+      categoryLabel: product.categoryLabel,
+    });
+  };
 
   // Related products
   const related = PRODUCTS.filter(
@@ -136,7 +153,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                           : 'bg-white text-[#39251E] border-[#39251E]/20 hover:border-[#A9472A]'
                       }`}
                     >
-                      {pack.size} — ₹{pack.price}
+                      {pack.size} — ₹{formatPrice(pack.price)}
                     </button>
                   ))}
                 </div>
@@ -174,7 +191,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                     Estimated Total
                   </span>
                   <span className="font-serif text-3xl font-bold text-[#A9472A]">
-                    ₹{totalPrice}
+                    ₹{formatPrice(totalPrice)}
                   </span>
                 </div>
               </div>
@@ -193,18 +210,29 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                 />
               </div>
 
-              {/* Prominent WhatsApp Ordering CTA Button */}
-              <a
-                href={orderUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#496844] hover:bg-[#39251E] text-[#FFF8EE] font-mono text-sm uppercase tracking-widest font-bold transition-all duration-300 shadow-xl hover:shadow-2xl active:scale-98"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>Order via WhatsApp (₹{totalPrice})</span>
-              </a>
-              <span className="block text-[11px] font-mono text-[#39251E]/50 text-center mt-2">
-                Clicking opens WhatsApp directly with your prefilled order items.
+              {/* Action Buttons: Add to Basket + Instant WhatsApp Order */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  type="button"
+                  onClick={handleAddToCart}
+                  className="flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-full bg-[#39251E] hover:bg-[#A9472A] text-[#FFF8EE] font-mono text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-lg cursor-pointer"
+                >
+                  <ShoppingBag className="w-4 h-4" />
+                  <span>Add to Basket</span>
+                </button>
+
+                <a
+                  href={orderUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-lg cursor-pointer"
+                >
+                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <span>Direct Order (₹{formatPrice(totalPrice)})</span>
+                </a>
+              </div>
+              <span className="block text-[11px] font-mono text-[#39251E]/50 text-center mt-2.5">
+                Add multiple blends to your basket or order this single product instantly.
               </span>
             </div>
 

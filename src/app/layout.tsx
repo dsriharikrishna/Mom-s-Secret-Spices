@@ -4,6 +4,8 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CustomCursor from '@/components/ui/CustomCursor';
+import Providers from '@/components/providers/Providers';
+import CartDrawer from '@/components/cart/CartDrawer';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -79,10 +81,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${jakarta.variable} ${mono.variable} antialiased`}>
       <body className="min-h-screen flex flex-col bg-[#FFF8EE] text-[#39251E] selection:bg-[#E8A33A] selection:text-[#39251E]">
-        <CustomCursor />
-        <Header />
-        <main className="flex-1 w-full">{children}</main>
-        <Footer />
+        <Providers>
+          <CustomCursor />
+          <Header />
+          <main className="flex-1 w-full">{children}</main>
+          <Footer />
+          <CartDrawer />
+        </Providers>
       </body>
     </html>
   );

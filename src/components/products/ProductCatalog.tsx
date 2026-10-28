@@ -4,14 +4,16 @@ import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
+import { Search, Sparkles, MessageCircle, ArrowRight, ShoppingBag } from 'lucide-react';
 import { PRODUCTS, CATEGORIES, ProductCategory } from '@/data/products';
 import { buildWhatsAppOrderUrl } from '@/lib/whatsapp';
+import { useCartStore } from '@/store/cartStore';
 
 export default function ProductCatalog({ limit }: { limit?: number } = {}) {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc'>('featured');
+  const { addItem } = useCartStore();
 
   // Filter & Sort logic
   const filteredProducts = useMemo(() => {
@@ -203,22 +205,48 @@ export default function ProductCatalog({ limit }: { limit?: number } = {}) {
                         ))}
                       </div>
 
-                      <motion.a
-                        whileHover={{ scale: 1.12 }}
-                        whileTap={{ scale: 0.92 }}
-                        href={buildWhatsAppOrderUrl({
-                          productName: product.name,
-                          packSize: product.packs[0]?.size || '100g',
-                          quantity: 1,
-                          unitPrice: product.packs[0]?.price || 45,
-                        })}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Order ${product.name} on WhatsApp`}
-                        className="w-9 h-9 rounded-full bg-[#496844] hover:bg-[#39251E] text-white flex items-center justify-center transition-colors shadow-md shrink-0"
-                      >
-                        <MessageCircle className="w-4 h-4" />
-                      </motion.a>
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        {/* Quick Add To Basket Button */}
+                        <motion.button
+                          whileHover={{ scale: 1.12 }}
+                          whileTap={{ scale: 0.92 }}
+                          onClick={() => {
+                            addItem({
+                              productId: product.id,
+                              slug: product.slug,
+                              name: product.name,
+                              packSize: product.packs[0]?.size || '100g',
+                              unitPrice: product.packs[0]?.price || 45,
+                              quantity: 1,
+                              image: product.image,
+                              categoryLabel: product.categoryLabel,
+                            });
+                          }}
+                          aria-label={`Add ${product.name} to basket`}
+                          className="w-9 h-9 rounded-full bg-[#39251E] hover:bg-[#A9472A] text-white flex items-center justify-center transition-colors shadow-md cursor-pointer"
+                        >
+                          <ShoppingBag className="w-4 h-4" />
+                        </motion.button>
+
+                        {/* WhatsApp Direct Order Button */}
+                        <motion.a
+                          whileHover={{ scale: 1.12 }}
+                          whileTap={{ scale: 0.92 }}
+                          href={buildWhatsAppOrderUrl({
+                            productName: product.name,
+                            packSize: product.packs[0]?.size || '100g',
+                            quantity: 1,
+                            unitPrice: product.packs[0]?.price || 45,
+                            image: product.image,
+                          })}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Order ${product.name} on WhatsApp`}
+                          className="w-9 h-9 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white flex items-center justify-center transition-colors shadow-md cursor-pointer"
+                        >
+                          <MessageCircle className="w-4 h-4 fill-current" />
+                        </motion.a>
+                      </div>
                     </div>
                   </div>
                 </motion.div>

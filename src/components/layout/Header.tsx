@@ -5,21 +5,27 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageCircle, ArrowUpRight, X } from 'lucide-react';
+import { MessageCircle, ArrowUpRight, X, ShoppingBag } from 'lucide-react';
 import { BRAND_PHONE } from '@/lib/whatsapp';
+import { useCartStore } from '@/store/cartStore';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const { openCart, getTotalItems } = useCartStore();
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const totalCartItems = mounted ? getTotalItems() : 0;
 
   const [prevPathname, setPrevPathname] = useState(pathname);
 
@@ -81,8 +87,22 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Right: WhatsApp Quick Link & Refined Menu Toggle Pill */}
-          <div className="flex items-center gap-2.5">
+          {/* Right: Cart Button, WhatsApp Quick Link & Refined Menu Toggle Pill */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Cart Trigger Button */}
+            <button
+              onClick={openCart}
+              aria-label="Open Shopping Basket"
+              className="relative p-2 rounded-full border border-[#39251E]/15 bg-[#FFF8EE]/90 hover:bg-[#39251E] text-[#39251E] hover:text-[#FFF8EE] transition-all shadow-xs flex items-center justify-center cursor-pointer group"
+            >
+              <ShoppingBag className="w-4 h-4 transition-transform group-hover:scale-110" />
+              {totalCartItems > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] px-1 rounded-full bg-[#A9472A] text-[#FFF8EE] text-[10px] font-mono font-bold flex items-center justify-center shadow-xs animate-in zoom-in-75">
+                  {totalCartItems}
+                </span>
+              )}
+            </button>
+
             <a
               href={`https://wa.me/${BRAND_PHONE}?text=${encodeURIComponent(
                 "Namaste! I would like to inquire about Mom's Secret Spices."
