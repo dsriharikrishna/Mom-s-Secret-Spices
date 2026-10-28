@@ -23,7 +23,7 @@ export default function StorytellingScenes() {
       subtitle: 'Slow Cold Stone-Milling',
       description:
         'Industrial high-speed steel pulverizers heat spices up to 90°C, scorching volatile essential oils before they reach your pan. Mom’s Secret Spices uses traditional heavy granite stones operating at low RPMs to keep the spices cool and aromatically intact.',
-      image: '/Mom’s Secret Spices Spice Scroll Mockup.png',
+      image: '/moms-secret-spices-scroll-mockup.png',
       badge: 'Cold-Milled at <35°C',
     },
     {

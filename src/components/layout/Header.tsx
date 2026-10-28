@@ -49,13 +49,13 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Left: Brand Logo with Home Link */}
-          <Link href="/" className="relative w-28 h-10 sm:w-48 sm:h-24 transition-transform duration-300 hover:scale-105">
+          <Link href="/" className="relative w-36 h-11 sm:w-52 sm:h-14 transition-transform duration-300 hover:scale-105 flex items-center">
             <Image
               src="/brand-logo-transparent.webp"
               alt="Mom’s Secret Spices Logo"
               fill
-              sizes="(max-width: 640px) 112px, 192px"
-              className="object-contain"
+              sizes="(max-width: 640px) 144px, 208px"
+              className="object-contain object-left"
               priority
             />
           </Link>

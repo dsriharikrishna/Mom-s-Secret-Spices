@@ -73,7 +73,7 @@ export default function ExperiencePage() {
               controls
               playsInline
               preload="metadata"
-              poster="/Akshaya Foods Spice Scroll Mockup.png"
+              poster="/moms-secret-spices-scroll-mockup.png"
               className="w-full h-full object-cover"
             />
             
