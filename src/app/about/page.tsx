@@ -47,7 +47,7 @@ export default function AboutPage() {
             className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF1E4] text-[#A9472A] border border-[#A9472A]/20 font-mono text-xs uppercase tracking-widest font-semibold mb-4"
           >
             <Sparkles className="w-3.5 h-3.5 text-[#E8A33A]" />
-            <span>Since 1998 · Akshaya Foods, Bengaluru</span>
+            <span>Since 1998 · Mom’s Secret Spices, Bengaluru</span>
           </motion.span>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-[#39251E] uppercase tracking-tight leading-tight mb-6">
             The Secret in Every Spoon
@@ -66,7 +66,7 @@ export default function AboutPage() {
         >
           <Image
             src="/spice-catalog-banner.jpg"
-            alt="Akshaya Foods Spice Milling Craft"
+            alt="Mom’s Secret Spices Spice Milling Craft"
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
             priority

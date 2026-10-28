@@ -64,7 +64,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
               <div className="absolute top-6 left-6">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono font-bold uppercase bg-[#A9472A] text-[#FFF8EE] shadow-md">
                   <Sparkles className="w-3.5 h-3.5 text-[#E8A33A]" />
-                  <span>Akshaya Authentic</span>
+                  <span>Authentic Recipe</span>
                 </span>
               </div>
             </div>

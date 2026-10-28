@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
     {
       num: '1',
       title: 'Our Commitment to Your Privacy',
-      desc: 'Mom’s Secret Spices (crafted by Akshaya Foods, Bengaluru, Karnataka) respects your privacy. We strictly do not sell, rent, trade, or distribute your personal customer data to any external marketing brokers or third-party advertising exchanges.',
+      desc: 'Mom’s Secret Spices (crafted Artisanal Heritage Spices, Bengaluru, Karnataka) respects your privacy. We strictly do not sell, rent, trade, or distribute your personal customer data to any external marketing brokers or third-party advertising exchanges.',
       highlight: true,
     },
     {

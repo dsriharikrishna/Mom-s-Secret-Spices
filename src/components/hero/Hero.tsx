@@ -7,6 +7,22 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
 import { PRODUCTS, Product } from '@/data/products';
 
+const HERO_IMAGE_MAP: Record<string, string> = {
+  'garam-masala': '/images/hero/garam-masala-hero.webp',
+  'chilli-powder': '/images/hero/chilli-powder-hero.webp',
+  'turmeric-powder': '/images/hero/turmeric-powder-hero.webp',
+  'coriander-powder': '/images/hero/coriander-powder-hero.webp',
+  'cumin-powder': '/images/hero/cumin-powder-hero.webp',
+  'chicken-masala': '/images/hero/chicken-masala-hero.webp',
+  'dum-biryani': '/images/hero/biryani-masala-hero.webp',
+  'sambar-powder': '/images/hero/sambar-powder-hero.webp',
+  'mutton-masala': '/images/hero/mutton-masala-hero.webp',
+  'chicken-kabab': '/images/hero/chicken-kabab-hero.webp',
+  'tandoori-masala': '/images/hero/tandoori-masala-hero.webp',
+  'bisibelebath': '/images/hero/bisibelebath-hero.webp',
+  'fish-masala': '/images/hero/fish-masala-hero.webp',
+};
+
 export default function Hero() {
   const carouselProducts = PRODUCTS.slice(0, 8); // Top 8 authentic blends
 
@@ -81,7 +97,7 @@ export default function Hero() {
     }
   };
 
-  const triggerJarFlight = (product: Product) => {
+  const triggerPouchFlight = (product: Product) => {
     setFlyingProduct(product);
     setIsFlying(true);
     setTimeout(() => {
@@ -209,7 +225,7 @@ export default function Hero() {
               }}
               onClick={() => {
                 if (isCenter) {
-                  triggerJarFlight(product);
+                  triggerPouchFlight(product);
                 } else {
                   setActiveIndex(index);
                 }
@@ -237,7 +253,7 @@ export default function Hero() {
                 {/* Floating Jar Image with Realistic Ambient Shadow */}
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image
-                    src={product.image}
+                    src={HERO_IMAGE_MAP[product.slug] || product.image}
                     alt={product.name}
                     fill
                     className={`object-contain transition-transform duration-500 ${
@@ -353,7 +369,7 @@ export default function Hero() {
               className="relative w-72 h-96 sm:w-88 sm:h-[440px] flex items-center justify-center"
             >
               <Image
-                src={flyingProduct.image}
+                src={HERO_IMAGE_MAP[flyingProduct.slug] || flyingProduct.image}
                 alt={flyingProduct.name}
                 fill
                 className="object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,0.6)]"

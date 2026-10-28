@@ -14,7 +14,7 @@ export default function StorytellingScenes() {
       subtitle: 'From Heritage Soil to Kitchen Hearth',
       description:
         'We reject machine-extruded spice extracts. We source sun-dried Byadgi chillies with wrinkly oil-rich skin, high-curcumin Salem turmeric rhizomes, and hand-plucked green cardamom from Western Ghat rainforests.',
-      image: '/images/products/turmeric-powder.jpg',
+      image: '/images/products/sachet-turmeric-powder.jpg',
       badge: 'Single-Origin Sourcing',
     },
     {
@@ -22,8 +22,8 @@ export default function StorytellingScenes() {
       title: 'THE ANCIENT CRAFT',
       subtitle: 'Slow Cold Stone-Milling',
       description:
-        'Industrial high-speed steel pulverizers heat spices up to 90°C, scorching volatile essential oils before they reach your pan. Akshaya Foods uses traditional heavy granite stones operating at low RPMs to keep the spices cool and aromatically intact.',
-      image: '/Akshaya Foods Spice Scroll Mockup.png',
+        'Industrial high-speed steel pulverizers heat spices up to 90°C, scorching volatile essential oils before they reach your pan. Mom’s Secret Spices uses traditional heavy granite stones operating at low RPMs to keep the spices cool and aromatically intact.',
+      image: '/Mom’s Secret Spices Spice Scroll Mockup.png',
       badge: 'Cold-Milled at <35°C',
     },
     {
@@ -32,7 +32,7 @@ export default function StorytellingScenes() {
       subtitle: 'Century-Old Regional Recipes',
       description:
         'Every masala carries a generational legacy: Marathi Moggu and dry copra in royal Mysore Bisi Bele Bath, stone flower and shahi jeera in Hyderabadi Dum Biryani, and slow-roasted lentils in authentic Thanjavur Sambar.',
-      image: '/images/products/bisibelebath.jpg',
+      image: '/images/products/sachet-bisibelebath.jpg',
       badge: 'Authentic Regional Ratios',
     },
     {

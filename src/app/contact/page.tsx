@@ -19,7 +19,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = 
-      `Namaste Akshaya Foods! 🙏\n\n` +
+      `Namaste Mom’s Secret Spices! 🙏\n\n` +
       `New Website Contact Form Submission:\n` +
       `• Name: ${formState.name}\n` +
       `• Phone: ${formState.phone}\n` +
@@ -68,7 +68,7 @@ export default function ContactPage() {
           >
             <div className="p-8 rounded-3xl bg-[#FAF1E4] border border-[#39251E]/10 space-y-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-serif text-2xl font-bold text-[#39251E]">
-                Akshaya Foods Headquarters
+                Mom’s Secret Spices Headquarters
               </h3>
 
               <div className="space-y-4 text-sm text-[#39251E]/80">
@@ -103,7 +103,7 @@ export default function ContactPage() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   href={`https://wa.me/${BRAND_PHONE}?text=${encodeURIComponent(
-                    "Namaste Akshaya Foods! I would like to inquire about Mom's Secret Spices."
+                    "Namaste Mom’s Secret Spices! I would like to inquire about Mom's Secret Spices."
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

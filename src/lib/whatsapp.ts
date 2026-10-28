@@ -18,7 +18,7 @@ export function buildWhatsAppOrderUrl(details: WhatsAppOrderDetails): string {
   const totalPrice = unitPrice * quantity;
 
   let message = 
-    `Namaste Akshaya Foods! 🙏\n\n` +
+    `Namaste Mom’s Secret Spices! 🙏\n\n` +
     `I would like to order from *Mom's Secret Spices*:\n` +
     `━━━━━━━━━━━━━━━━━━━━\n` +
     `• *Product:* ${productName}\n` +
@@ -43,7 +43,7 @@ export function buildWhatsAppOrderUrl(details: WhatsAppOrderDetails): string {
  */
 export function buildWhatsAppWholesaleUrl(businessType: string = 'Retailer / Distributor'): string {
   const message =
-    `Namaste Akshaya Foods! 🙏\n\n` +
+    `Namaste Mom’s Secret Spices! 🙏\n\n` +
     `I am inquiring regarding *Wholesale & HoReCa Supply* for *Mom's Secret Spices*.\n` +
     `• *Inquiry Type:* ${businessType}\n` +
     `• *Location / City:* [Your City Here]\n\n` +

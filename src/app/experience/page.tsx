@@ -81,7 +81,7 @@ export default function ExperiencePage() {
             <div className="absolute top-5 left-5 pointer-events-none">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#39251E]/80 backdrop-blur-md text-[#FFF8EE] font-mono text-[11px] font-bold uppercase tracking-wider border border-[#FFF8EE]/20 shadow-lg">
                 <span className="w-2 h-2 rounded-full bg-[#E8A33A] animate-ping" />
-                <span>Akshaya Foods · Brand Film</span>
+                <span>Mom&apos;s Secret Spices · Brand Film</span>
               </span>
             </div>
           </motion.div>

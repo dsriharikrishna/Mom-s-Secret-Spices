@@ -5,7 +5,7 @@ import ProductCatalog from '@/components/products/ProductCatalog';
 export const metadata: Metadata = {
   title: "The Spice Collection (27) | Mom's Secret Spices",
   description:
-    'Explore all 27 freshly stone-ground Indian spices, regional heirlooms, and gourmet seasonings crafted by Akshaya Foods.',
+    'Explore all 27 freshly stone-ground Indian spices, regional heirlooms, and gourmet seasonings crafted Artisanal Heritage Spices.',
 };
 
 export default function ProductsPage() {

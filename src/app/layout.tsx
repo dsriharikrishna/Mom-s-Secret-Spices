@@ -26,13 +26,13 @@ const mono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://momssecretspices.com'),
-  title: "Mom's Secret Spices | Crafted by Akshaya Foods",
+  title: "Mom's Secret Spices | Crafted Artisanal Heritage Spices",
   description:
-    'Authentic artisanal Indian spice blends freshly stone-ground and curated for everyday culinary magic. Crafted by Akshaya Foods, Bengaluru, Karnataka.',
+    'Authentic artisanal Indian spice blends freshly stone-ground and curated for everyday culinary magic. Crafted Artisanal Heritage Spices, Bengaluru, Karnataka.',
   keywords: [
     'Indian spices',
     'stone-ground masala',
-    'Akshaya Foods',
+    'Mom’s Secret Spices',
     'Bisi Bele Bath powder',
     'Mysore Rasam',
     'artisanal spices',
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Mom's Secret Spices — Authentic Stone-Ground Blends",
-    description: 'Every spice has a story. Rooted in Indian kitchens, crafted with care by Akshaya Foods, Bengaluru.',
+    description: 'Every spice has a story. Rooted in Indian kitchens, crafted with care Artisanal Heritage Spices, Bengaluru.',
     url: 'https://momssecretspices.com',
-    siteName: "Mom's Secret Spices | Akshaya Foods",
+    siteName: "Mom's Secret Spices | Mom’s Secret Spices",
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Akshaya Foods — Mom’s Secret Spices Logo & Heritage',
+        alt: 'Mom’s Secret Spices — Mom’s Secret Spices Logo & Heritage',
       },
     ],
     locale: 'en_IN',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Mom's Secret Spices | Crafted by Akshaya Foods",
+    title: "Mom's Secret Spices | Crafted Artisanal Heritage Spices",
     description: 'Authentic stone-ground Indian spice blends from Bengaluru.',
     images: ['/og-image.jpg'],
   },

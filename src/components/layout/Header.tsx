@@ -52,7 +52,7 @@ export default function Header() {
           <Link href="/" className="relative w-28 h-10 sm:w-48 sm:h-24 transition-transform duration-300 hover:scale-105">
             <Image
               src="/brand-logo-transparent.webp"
-              alt="Akshaya Foods Brand Logo"
+              alt="Mom’s Secret Spices Logo"
               fill
               sizes="(max-width: 640px) 112px, 192px"
               className="object-contain"
@@ -76,7 +76,7 @@ export default function Header() {
                 MOM’S SECRET SPICES
               </span>
               <span className="text-[9px] uppercase font-mono tracking-[0.25em] text-[#A9472A]">
-                by Akshaya Foods
+                Artisanal Heritage Spices
               </span>
             </div>
           </Link>
@@ -137,7 +137,7 @@ export default function Header() {
               <Link href="/" onClick={() => setIsOpen(false)} className="relative w-28 h-10 sm:w-36 sm:h-11">
                 <Image
                   src="/brand-logo-transparent.webp"
-                  alt="Akshaya Foods Brand Logo"
+                  alt="Mom’s Secret Spices Logo"
                   fill
                   sizes="(max-width: 640px) 112px, 144px"
                   className="object-contain"
@@ -207,7 +207,7 @@ export default function Header() {
               <div className="lg:col-span-4 hidden lg:flex flex-col justify-between p-7 rounded-3xl bg-[#FDF8F0]/5 border border-[#FDF8F0]/10 space-y-5">
                 <div>
                   <span className="font-mono text-[10px] uppercase tracking-widest text-[#E8A33A] font-bold block mb-1.5">
-                    The Akshaya Standard
+                    The Pure Spice Standard
                   </span>
                   <h4 className="font-serif text-xl font-bold text-[#FDF8F0] leading-snug">
                     Stone-Ground in Micro-Batches
@@ -239,7 +239,7 @@ export default function Header() {
             {/* Bottom Footer Info inside Menu */}
             <div className="max-w-7xl mx-auto w-full pt-4 border-t border-[#FDF8F0]/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 font-mono text-xs text-[#FDF8F0]/60 pb-2">
               <div className="flex items-center gap-6">
-                <span>© 2026 Akshaya Foods</span>
+                <span>© 2026 Mom’s Secret Spices</span>
                 <span>Crafted by Mom&apos;s Secret Spices</span>
               </div>
               <div className="flex items-center gap-6">

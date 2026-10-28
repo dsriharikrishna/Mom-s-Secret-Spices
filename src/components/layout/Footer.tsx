@@ -17,7 +17,7 @@ export default function Footer() {
                 </span>
               </div>
               <p className="font-mono text-xs uppercase tracking-widest text-[#E8A33A] mb-4">
-                Crafted by Akshaya Foods · Bengaluru, India
+                Crafted Artisanal Heritage Spices · Bengaluru, India
               </p>
               <p className="text-sm text-[#FFF8EE]/70 max-w-sm leading-relaxed mb-6">
                 Authentic artisanal Indian spice blends freshly stone-ground and curated for everyday culinary magic. Free from synthetic additives, preservatives, and artificial food colorants.
@@ -96,7 +96,7 @@ export default function Footer() {
         {/* Bottom Bar with Agrumea-inspired subtle typography */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs text-[#FFF8EE]/50">
           <div className="flex items-center gap-4">
-            <span>© 2026 Akshaya Foods. All Rights Reserved.</span>
+            <span>© 2026 Mom’s Secret Spices. All Rights Reserved.</span>
             <span className="hidden sm:inline">·</span>
             <span>Food License & Agmark Certified</span>
           </div>

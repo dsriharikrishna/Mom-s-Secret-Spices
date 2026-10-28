@@ -63,7 +63,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF8EE]/10 border border-[#FFF8EE]/15 font-mono text-xs uppercase tracking-widest text-[#E8A33A] font-semibold mb-3 backdrop-blur-sm"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#E8A33A] animate-pulse" />
-              The Akshaya Foods Standard
+              The Mom’s Secret Spices Standard
             </motion.span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight">
               Four Purity Guarantees

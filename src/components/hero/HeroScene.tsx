@@ -5,8 +5,8 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, ContactShadows, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
 
-// 3D Realistic Jar / Packaging with authentic label texture, cylindrical glass reflections & black lid
-function SpiceJar3D({ textureUrl }: { textureUrl: string }) {
+// 3D Realistic Stand-Up Sachet / Barrier Pouch with authentic brand label, top heat-sealed crimp & notches
+function SpiceSachet3D({ textureUrl }: { textureUrl: string }) {
   const groupRef = useRef<THREE.Group>(null);
   const texture = useMemo(() => {
     const tex = new THREE.TextureLoader().load(textureUrl);
@@ -33,58 +33,66 @@ function SpiceJar3D({ textureUrl }: { textureUrl: string }) {
   });
 
   return (
-    <group ref={groupRef} position={[0, 0, 0]}>
-      {/* 3D Glass Jar Body */}
-      <mesh position={[0, 0, 0]} castShadow receiveShadow>
-        <cylinderGeometry args={[1.1, 1.1, 2.8, 48]} />
-        <meshPhysicalMaterial
-          roughness={0.12}
-          transmission={0.4}
-          thickness={0.5}
-          ior={1.5}
-          color="#FAF3E0"
-          transparent
-          opacity={0.35}
-        />
-      </mesh>
-
-      {/* Spice Powder Filling Inside Glass */}
-      <mesh position={[0, -0.2, 0]}>
-        <cylinderGeometry args={[1.02, 1.02, 2.3, 36]} />
+    <group ref={groupRef} position={[0, -0.1, 0]}>
+      {/* Stand-Up Pouch Main Body (Curved, puffy barrier pouch) */}
+      <mesh position={[0, -0.15, 0]} castShadow receiveShadow>
+        <boxGeometry args={[2.0, 2.5, 0.45, 16, 16, 8]} />
         <meshStandardMaterial
-          color="#8B4513"
-          roughness={0.85}
-          metalness={0.05}
+          color="#3A1D1A"
+          roughness={0.4}
+          metalness={0.12}
         />
       </mesh>
 
-      {/* Front Curved Authentic Label */}
-      <mesh position={[0, -0.05, 0.95]} castShadow>
-        <planeGeometry args={[1.65, 2.2, 32, 32]} />
+      {/* Front Face with Sachet Label Art */}
+      <mesh position={[0, -0.15, 0.235]} castShadow>
+        <planeGeometry args={[1.96, 2.46, 16, 16]} />
         <meshStandardMaterial
           map={texture}
-          roughness={0.35}
-          metalness={0.05}
+          roughness={0.32}
+          metalness={0.08}
           side={THREE.DoubleSide}
         />
       </mesh>
 
-      {/* Premium Black Fluted Lid */}
-      <mesh position={[0, 1.55, 0]} castShadow>
-        <cylinderGeometry args={[1.18, 1.18, 0.35, 48]} />
+      {/* Top Heat-Sealed Crimp Strip */}
+      <mesh position={[0, 1.25, 0]} castShadow>
+        <boxGeometry args={[2.04, 0.32, 0.08]} />
         <meshStandardMaterial
-          color="#1A1817"
-          roughness={0.25}
-          metalness={0.4}
+          color="#2C1412"
+          roughness={0.5}
+          metalness={0.3}
         />
       </mesh>
-      {/* Lid Rim Detail */}
-      <mesh position={[0, 1.72, 0]}>
-        <cylinderGeometry args={[1.15, 1.15, 0.05, 48]} />
+
+      {/* Top Gold Crimp Notch Highlight */}
+      <mesh position={[0, 1.38, 0.02]} castShadow>
+        <boxGeometry args={[2.06, 0.05, 0.09]} />
         <meshStandardMaterial
-          color="#2A2624"
-          roughness={0.3}
-          metalness={0.5}
+          color="#D97706"
+          roughness={0.25}
+          metalness={0.65}
+        />
+      </mesh>
+
+      {/* Left Easy-Tear Notch */}
+      <mesh position={[-1.02, 1.2, 0]}>
+        <boxGeometry args={[0.08, 0.06, 0.12]} />
+        <meshStandardMaterial color="#1E0E0C" />
+      </mesh>
+
+      {/* Right Easy-Tear Notch */}
+      <mesh position={[1.02, 1.2, 0]}>
+        <boxGeometry args={[0.08, 0.06, 0.12]} />
+        <meshStandardMaterial color="#1E0E0C" />
+      </mesh>
+
+      {/* Bottom Gusset Stand */}
+      <mesh position={[0, -1.42, 0]} receiveShadow>
+        <cylinderGeometry args={[1.0, 0.85, 0.1, 32]} />
+        <meshStandardMaterial
+          color="#2C1412"
+          roughness={0.7}
         />
       </mesh>
     </group>
@@ -166,9 +174,9 @@ export default function HeroScene() {
         />
         <pointLight position={[0, -2, 2]} intensity={0.6} color="#A9472A" />
 
-        {/* Floating 3D Jar with natural hover physics */}
+        {/* Floating 3D Stand-Up Sachet with natural hover physics */}
         <Float speed={1.8} rotationIntensity={0.3} floatIntensity={0.5}>
-          <SpiceJar3D textureUrl="/images/products/garam-masala.jpg" />
+          <SpiceSachet3D textureUrl="/images/products/sample-sachet-garam-masala.jpg" />
         </Float>
 
         {/* Golden Floating Spice Dust */}

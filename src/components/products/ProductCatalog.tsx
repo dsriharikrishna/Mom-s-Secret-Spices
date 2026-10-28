@@ -55,8 +55,8 @@ export default function ProductCatalog({ limit }: { limit?: number } = {}) {
           </h2>
           <p className="text-sm md:text-base text-[#39251E]/75 font-normal leading-relaxed">
             {limit
-              ? 'Hand-selected stone-ground single spices and authentic regional heirloom formulations by Akshaya Foods.'
-              : 'All 27 authentic spice blends freshly stone-ground by Akshaya Foods. Selected with total integrity, packed with zero synthetic fillers.'}
+              ? 'Hand-selected stone-ground single spices and authentic regional heirloom formulations Artisanal Heritage Spices.'
+              : 'All 27 authentic spice blends freshly stone-ground Artisanal Heritage Spices. Selected with total integrity, packed with zero synthetic fillers.'}
           </p>
         </div>
 
@@ -161,7 +161,7 @@ export default function ProductCatalog({ limit }: { limit?: number } = {}) {
                     {/* Image Area with Zoom & Micro-floating */}
                     <Link
                       href={`/products/${product.slug}`}
-                      className="block relative aspect-square w-full rounded-2xl overflow-hidden mb-6 flex items-center justify-center p-2"
+                      className="block relative aspect-square w-full rounded-2xl overflow-hidden mb-6 flex items-center justify-center "
                     >
                       <motion.div
                         className="relative w-full h-full flex items-center justify-center"
@@ -172,7 +172,7 @@ export default function ProductCatalog({ limit }: { limit?: number } = {}) {
                           src={product.image}
                           alt={product.name}
                           fill
-                          className="object-contain p-2 drop-shadow-[0_15px_22px_rgba(57,37,30,0.22)]"
+                          className="object-contain drop-shadow-[0_15px_22px_rgba(57,37,30,0.22)]"
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
                       </motion.div>
