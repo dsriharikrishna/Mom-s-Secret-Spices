@@ -36,8 +36,8 @@ export default function ExperiencePage() {
   return (
     <div className="pt-24 pb-20 min-h-screen bg-[#FFF8EE] overflow-hidden">
       {/* Hero Film Section */}
-      <section className="relative px-6 md:px-12 pt-8 pb-16">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative px-6 md:px-12 lg:px-16 pt-8 pb-16">
+        <div className="w-full">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -89,10 +89,10 @@ export default function ExperiencePage() {
       </section>
 
       {/* Saffron Section Transition (Agrumea-Inspired Color Shift) */}
-      <section className="py-20 px-6 md:px-12 bg-[#E8A33A] text-[#39251E] relative overflow-hidden">
+      <section className="py-20 px-6 md:px-12 lg:px-16 bg-[#E8A33A] text-[#39251E] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="w-full relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

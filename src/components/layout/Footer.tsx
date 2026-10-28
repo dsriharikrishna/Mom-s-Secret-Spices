@@ -1,21 +1,26 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { BRAND_PHONE_DISPLAY, BRAND_EMAIL } from '@/lib/whatsapp';
 
 export default function Footer() {
   return (
     <footer className="bg-[#39251E] text-[#FFF8EE] pt-20 pb-12 border-t border-[#FFF8EE]/10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12 lg:px-16">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-[#FFF8EE]/10">
           {/* Brand Col */}
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="w-2.5 h-2.5 rotate-45 bg-[#E8A33A]"></span>
-                <span className="font-serif text-2xl md:text-3xl font-bold tracking-tight text-[#FFF8EE]">
-                  MOM’S SECRET SPICES
-                </span>
-              </div>
+              {/* Brand Logo & Wordmark */}
+              <Link href="/" className="inline-block relative w-48 h-14 sm:w-60 sm:h-16 mb-4 bg-white/5 rounded-2xl p-2 border border-white/10 backdrop-blur-xs hover:border-[#E8A33A]/50 transition-colors">
+                <Image
+                  src="/brand-logo-transparent.webp"
+                  alt="Mom’s Secret Spices Logo"
+                  fill
+                  sizes="(max-width: 640px) 192px, 240px"
+                  className="object-contain object-left"
+                />
+              </Link>
               <p className="font-mono text-xs uppercase tracking-widest text-[#E8A33A] mb-4">
                 Crafted Artisanal Heritage Spices · Bengaluru, India
               </p>

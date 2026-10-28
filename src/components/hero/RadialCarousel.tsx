@@ -48,13 +48,13 @@ export default function RadialCarousel() {
   };
 
   return (
-    <section className="relative py-28 md:py-36 px-6 md:px-12 bg-[#FFF8EE] overflow-hidden border-t border-[#39251E]/10">
+    <section className="relative py-28 md:py-36 px-6 md:px-12 lg:px-16 bg-[#FFF8EE] overflow-hidden border-t border-[#39251E]/10">
       {/* Curved Background Arc Text (Agrumea-Style) */}
       <div className="absolute top-8 left-1/2 -translate-x-1/2 pointer-events-none select-none opacity-10 whitespace-nowrap font-serif text-[7rem] md:text-[12rem] font-bold text-[#A9472A] tracking-wider">
         AUTHENTIC · STONE-GROUND · MAGIC
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="w-full relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0E2CF] text-[#A9472A] font-mono text-xs uppercase tracking-widest font-semibold mb-3">

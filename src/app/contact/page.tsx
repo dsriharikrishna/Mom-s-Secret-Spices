@@ -32,8 +32,8 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-28 pb-24 px-6 md:px-12 bg-[#FFF8EE] min-h-screen overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+    <div className="pt-32 pb-24 px-6 md:px-12 lg:px-16 bg-[#FFF8EE] min-h-screen overflow-hidden">
+      <div className="w-full">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

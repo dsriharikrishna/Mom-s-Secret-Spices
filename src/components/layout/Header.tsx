@@ -45,15 +45,42 @@ export default function Header() {
 
   return (
     <>
+      {/* Top Announcement Banner */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-[#39251E] text-[#FFF8EE] text-[11px] sm:text-xs font-mono py-1.5 px-4 sm:px-8 border-b border-[#E8A33A]/20 transition-all duration-300">
+        <div className="w-full flex items-center justify-between gap-4">
+          <div className="flex items-center gap-2 truncate">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#E8A33A] animate-pulse shrink-0" />
+            <span className="font-semibold text-[#E8A33A] tracking-wider uppercase">Artisanal Heritage Batch:</span>
+            <span className="text-[#FFF8EE]/90 truncate">Stone-ground to order in small weekly batches · Free delivery across Bengaluru</span>
+          </div>
+
+          <div className="hidden sm:flex items-center gap-4 shrink-0 text-[10px] sm:text-[11px] uppercase tracking-wider text-[#FFF8EE]/75">
+            <span className="flex items-center gap-1.5">
+              <span className="text-[#E8A33A]">✦</span> 100% Pure · Zero Preservatives
+            </span>
+            <a
+              href={`https://wa.me/${BRAND_PHONE}?text=${encodeURIComponent(
+                "Namaste! I would like to inquire about bulk ordering for Mom's Secret Spices."
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#E8A33A] hover:underline font-bold"
+            >
+              Order on WhatsApp →
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Sticky Fixed Header Bar (Slim & Elegant) */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-[28px] sm:top-[30px] left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
             ? 'py-1.5 bg-[#FDF8F0]/95 backdrop-blur-md border-b border-[#39251E]/10 shadow-xs'
             : 'py-2 bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="w-full px-6 md:px-12 lg:px-16 flex items-center justify-between">
           {/* Left: Brand Logo with Home Link */}
           <Link href="/" className="relative w-36 h-11 sm:w-52 sm:h-14 transition-transform duration-300 hover:scale-105 flex items-center">
             <Image
@@ -153,7 +180,7 @@ export default function Header() {
             className="fixed inset-0 z-[60] bg-[#1F1410] text-[#FDF8F0] flex flex-col justify-between p-5 sm:p-10 md:p-12 min-h-screen overflow-y-auto select-none"
           >
             {/* Top Bar inside Menu: Logo & Status */}
-            <div className="max-w-7xl mx-auto w-full flex items-center justify-between border-b border-[#FDF8F0]/15 pb-4 pt-2 shrink-0">
+            <div className="w-full flex items-center justify-between border-b border-[#FDF8F0]/15 pb-4 pt-2 shrink-0">
               <Link href="/" onClick={() => setIsOpen(false)} className="relative w-28 h-10 sm:w-36 sm:h-11">
                 <Image
                   src="/brand-logo-transparent.webp"
@@ -178,7 +205,7 @@ export default function Header() {
             </div>
 
             {/* Main Editorial Nav Links Layout */}
-            <div className="max-w-7xl mx-auto w-full my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-6 sm:py-2">
+            <div className="w-full my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-6 sm:py-2">
               {/* Left Column: Staggered Display Links */}
               <div className="lg:col-span-8 flex flex-col">
                 {navLinks.map((link, index) => {
@@ -257,7 +284,7 @@ export default function Header() {
             </div>
 
             {/* Bottom Footer Info inside Menu */}
-            <div className="max-w-7xl mx-auto w-full pt-4 border-t border-[#FDF8F0]/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 font-mono text-xs text-[#FDF8F0]/60 pb-2">
+            <div className="w-full pt-4 border-t border-[#FDF8F0]/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 font-mono text-xs text-[#FDF8F0]/60 pb-2">
               <div className="flex items-center gap-6">
                 <span>© 2026 Mom’s Secret Spices</span>
                 <span>Crafted by Mom&apos;s Secret Spices</span>

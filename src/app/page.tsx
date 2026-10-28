@@ -42,12 +42,12 @@ export default function HomePage() {
       <Hero />
 
       {/* 2. The 4 Purity & Craftsmanship Commitments */}
-      <section className="relative py-24 px-6 md:px-12 bg-[#39251E] text-[#FFF8EE] overflow-hidden">
+      <section className="relative py-24 px-6 md:px-12 lg:px-16 bg-[#39251E] text-[#FFF8EE] overflow-hidden">
         {/* Ambient background glow & motif elements */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#E8A33A]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-[#A9472A]/15 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="w-full relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ export default function HomePage() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-5xl mx-auto rounded-3xl p-8 sm:p-14 bg-[#FFF8EE]/10 border border-[#FFF8EE]/20 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left shadow-2xl backdrop-blur-md relative z-10"
+          className="w-full rounded-3xl p-8 sm:p-14 bg-[#FFF8EE]/10 border border-[#FFF8EE]/20 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left shadow-2xl backdrop-blur-md relative z-10"
         >
           <div className="space-y-3">
             <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#E8A33A] font-semibold">

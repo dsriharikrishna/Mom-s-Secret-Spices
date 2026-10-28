@@ -48,8 +48,8 @@ export default function ProductDetailClient({ product }: { product: Product }) {
   ).slice(0, 3);
 
   return (
-    <div className="pt-28 pb-20 px-6 md:px-12 bg-[#FFF8EE] min-h-screen">
-      <div className="max-w-7xl mx-auto">
+    <div className="pt-32 pb-20 px-6 md:px-12 lg:px-16 bg-[#FFF8EE] min-h-screen">
+      <div className="w-full">
         {/* Back Navigation Breadcrumb */}
         <div className="mb-8">
           <Link

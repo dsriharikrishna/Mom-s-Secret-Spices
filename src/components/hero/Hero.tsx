@@ -305,7 +305,7 @@ export default function Hero() {
       </div>
 
       {/* 3. Pure Agrumea Bottom Footer Bar */}
-      <div className="max-w-7xl mx-auto w-full z-10 flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest text-[#39251E]/70 border-t border-[#39251E]/10 pt-3 sm:pt-4">
+      <div className="w-full z-10 flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest text-[#39251E]/70 border-t border-[#39251E]/10 pt-3 sm:pt-4 px-6 md:px-12 lg:px-16">
         {/* Left: Agrumea Legal Link */}
         <a 
           href="/privacy-policy" 

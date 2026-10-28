@@ -47,8 +47,8 @@ export default function StorytellingScenes() {
   ];
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-[#F0E2CF]/50 border-t border-[#39251E]/10 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 px-6 md:px-12 lg:px-16 bg-[#F0E2CF]/50 border-t border-[#39251E]/10 overflow-hidden">
+      <div className="w-full">
         {/* Editorial Section Intro */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

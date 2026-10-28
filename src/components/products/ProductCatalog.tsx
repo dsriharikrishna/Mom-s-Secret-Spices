@@ -44,8 +44,8 @@ export default function ProductCatalog({ limit }: { limit?: number } = {}) {
   }, [filteredProducts, limit]);
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-[#FFF8EE]">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-6 md:px-12 lg:px-16 bg-[#FFF8EE]">
+      <div className="w-full">
         {/* Header & Manifesto */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F0E2CF] text-[#A9472A] font-mono text-xs uppercase tracking-widest font-semibold mb-4">
