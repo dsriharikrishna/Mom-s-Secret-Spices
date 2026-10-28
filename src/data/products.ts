@@ -23,6 +23,7 @@ export interface Product {
   regionalOrigin: string;
   purityBadge: string;
   image: string;
+  hero_image?: string;
   accentColor: string;
   packs: ProductPackOption[];
   featured?: boolean;
@@ -72,6 +73,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '1',
     slug: 'turmeric-powder',
+    hero_image: '/images/hero/turmeric-powder-hero.webp',
     name: 'Turmeric Powder (Haldi)',
     nativeName: 'हल्दी पाउडर / ಅರಿಶಿನ ಪುಡಿ',
     category: 'pure-spices',
@@ -94,6 +96,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '2',
     slug: 'chilli-powder',
+    hero_image: '/images/hero/chilli-powder-hero.webp',
     name: 'Pure Red Chilli Powder',
     nativeName: 'लाल मिर्च पाउडर / ಖಾರದ ಪುಡಿ',
     category: 'pure-spices',
@@ -116,6 +119,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '3',
     slug: 'coriander-powder',
+    hero_image: '/images/hero/coriander-powder-hero.webp',
     name: 'Coriander Powder (Dhania)',
     nativeName: 'धनिया पाउडर / ಕೊತ್ತಂಬರಿ ಪುಡಿ',
     category: 'pure-spices',
@@ -138,6 +142,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '4',
     slug: 'cumin-powder',
+    hero_image: '/images/hero/cumin-powder-hero.webp',
     name: 'Jeera (Cumin) Powder',
     nativeName: 'जीरा पाउडर / ಜೀರಿಗೆ ಪುಡಿ',
     category: 'pure-spices',
@@ -182,6 +187,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '6',
     slug: 'garam-masala',
+    hero_image: '/images/hero/garam-masala-hero.webp',
     name: 'Royal Garam Masala',
     nativeName: 'गरम मसाला / ಗರಂ ಮಸಾಲಾ',
     category: 'masala-blends',
@@ -204,6 +210,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '7',
     slug: 'dum-biryani',
+    hero_image: '/images/hero/biryani-masala-hero.webp',
     name: 'Dum Biryani Masala',
     nativeName: 'दम बिरयानी मसाला / ದಮ್ ಬಿರಿಯಾನಿ ಮಸಾಲ',
     category: 'masala-blends',
@@ -226,6 +233,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '8',
     slug: 'chicken-masala',
+    hero_image: '/images/hero/chicken-masala-hero.webp',
     name: 'Homestyle Chicken Masala',
     nativeName: 'चिकन मसाला / ಚಿಕನ್ ಮಸಾಲ',
     category: 'masala-blends',
@@ -248,6 +256,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '9',
     slug: 'mutton-masala',
+    hero_image: '/images/hero/mutton-masala-hero.webp',
     name: 'Spiced Mutton Masala',
     nativeName: 'मटन मसाला / ಮಟನ್ ಮಸಾಲ',
     category: 'masala-blends',
@@ -270,6 +279,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '10',
     slug: 'chicken-kabab',
+    hero_image: '/images/hero/chicken-kabab-hero.webp',
     name: 'Crispy Chicken Kabab Masala',
     nativeName: 'चिकन कबाब मसाला / ಚಿಕನ್ ಕಬಾಬ್ ಮಸಾಲ',
     category: 'masala-blends',
@@ -314,6 +324,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '12',
     slug: 'tandoori-masala',
+    hero_image: '/images/hero/tandoori-masala-hero.webp',
     name: 'Charcoal Tandoori Masala',
     nativeName: 'तंदूरी मसाला / ತಂದೂರಿ ಮಸಾಲ',
     category: 'masala-blends',
@@ -336,6 +347,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '13',
     slug: 'sambar-powder',
+    hero_image: '/images/hero/sambar-powder-hero.webp',
     name: 'Traditional Sambar Powder',
     nativeName: 'सांभर मसाला / ಸಾಂಬಾರ್ ಪುಡಿ',
     category: 'regional-blends',
@@ -358,6 +370,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '14',
     slug: 'bisibelebath',
+    hero_image: '/images/hero/bisibelebath-hero.webp',
     name: 'Bisi Bele Bath Powder',
     nativeName: 'ಬಿಸಿ ಬೇಳೆ ಬಾತ್ ಪುಡಿ',
     category: 'regional-blends',
@@ -706,6 +719,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '30',
     slug: 'fish-masala',
+    hero_image: '/images/hero/fish-masala-hero.webp',
     name: 'Coastal Special Fish Masala',
     nativeName: 'ಮೀನು ಮಸಾಲಾ / చేపల మసాలా',
     category: 'seafood-blends',

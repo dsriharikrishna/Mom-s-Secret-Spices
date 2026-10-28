@@ -7,24 +7,11 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
 import { PRODUCTS, Product } from '@/data/products';
 
-const HERO_IMAGE_MAP: Record<string, string> = {
-  'garam-masala': '/images/hero/garam-masala-hero.webp',
-  'chilli-powder': '/images/hero/chilli-powder-hero.webp',
-  'turmeric-powder': '/images/hero/turmeric-powder-hero.webp',
-  'coriander-powder': '/images/hero/coriander-powder-hero.webp',
-  'cumin-powder': '/images/hero/cumin-powder-hero.webp',
-  'chicken-masala': '/images/hero/chicken-masala-hero.webp',
-  'dum-biryani': '/images/hero/biryani-masala-hero.webp',
-  'sambar-powder': '/images/hero/sambar-powder-hero.webp',
-  'mutton-masala': '/images/hero/mutton-masala-hero.webp',
-  'chicken-kabab': '/images/hero/chicken-kabab-hero.webp',
-  'tandoori-masala': '/images/hero/tandoori-masala-hero.webp',
-  'bisibelebath': '/images/hero/bisibelebath-hero.webp',
-  'fish-masala': '/images/hero/fish-masala-hero.webp',
-};
+// Only include products that have dedicated transparent cutout hero assets in /images/hero
+const HERO_PRODUCTS: Product[] = PRODUCTS.filter((p): p is Product & { hero_image: string } => Boolean(p.hero_image));
 
 export default function Hero() {
-  const carouselProducts = PRODUCTS.slice(0, 8); // Top 8 authentic blends
+  const carouselProducts = HERO_PRODUCTS;
 
   const [activeIndex, setActiveIndex] = useState(0); // Start at first product
   const [hasCompletedAll, setHasCompletedAll] = useState(false);
@@ -253,7 +240,7 @@ export default function Hero() {
                 {/* Floating Jar Image with Realistic Ambient Shadow */}
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image
-                    src={HERO_IMAGE_MAP[product.slug] || product.image}
+                    src={product.hero_image || product.image}
                     alt={product.name}
                     fill
                     className={`object-contain transition-transform duration-500 ${
@@ -369,7 +356,7 @@ export default function Hero() {
               className="relative w-72 h-96 sm:w-88 sm:h-[440px] flex items-center justify-center"
             >
               <Image
-                src={HERO_IMAGE_MAP[flyingProduct.slug] || flyingProduct.image}
+                src={flyingProduct.hero_image || flyingProduct.image}
                 alt={flyingProduct.name}
                 fill
                 className="object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,0.6)]"
